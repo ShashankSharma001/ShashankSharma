@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Shashank Sharma</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    
+
+</head>
+
+<body id="top">
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <!-- site header
+    ================================================== -->
+    <header class="s-header">
+
+        
+
+        <nav class="header-nav-wrap">
+            <ul class="header-main-nav">
+                <li class="current"><a class="smoothscroll" href="#intro" title="intro">Intro</a></li>
+                <li><a class="smoothscroll" href="#about" title="about">About</a></li>
+                <li><a class="smoothscroll" href="#services" title="services">Services</a></li>
+                
+                <li><a class="smoothscroll" href="#contact" title="contact us">Say Hello</a></li>	
+            </ul>
+
+            <ul class="header-social">
+                <li><a href="https://www.instagram.com/sharma.shashank.001/?next=%2F"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/shashank-sharma-16075526a/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCFd1lJFPae6YN2nGb6-4o7w"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                <li><a href="github.com/shashanksharma001"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- intro
+    ================================================== -->
+    <section id="intro" class="s-intro target-section">
+
+        <div class="row intro-content">
+
+            <div class="column large-9 mob-full intro-text">
+                <h3>Hello, I'm Shashank Sharma</h3>
+                <h1>
+                    Web Developer <br>
+                    and Student.     <br>
+                      
+                </h1>
+            </div>
+
+            <div class="intro-scroll">
+                <a href="#about" class="intro-scroll-link smoothscroll">
+                    Scroll For More
+                </a>
+            </div>
+
+            <div class="intro-grid"></div>
+            <div class="intro-pic"></div>
+
+        </div> <!-- end row -->
+
+    </section> <!-- end intro -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+
+        <div class="about-me">
+
+            <div class="row heading-block" data-aos="fade-up">
+                <div class="column large-full">
+                    <h2 class="section-heading">About Me</h2>
+                </div>
+            </div>
+
+            <div class="row about-me__content" data-aos="fade-up">
+                <div class="column large-full about-me__text">
+                    <p class="lead">
+                    Hello, everyone! My name is Shashank Sharma, and I'm thrilled to have the opportunity to introduce myself. I am currently studying at Seth Anandram Jaipuria School, where I am honing my skills and knowledge in various subjects.
+
+
+                    </p>
+
+                    <p>
+                    However, my true passion lies in web development. Being a web developer brings me immense joy as I get to combine my creativity with my technical expertise. I enjoy the process of transforming ideas into functional and visually appealing websites. It's a constantly evolving field, and I'm always eager to learn new technologies and stay up to date with the latest industry trends.
+                    </p>
+
+                    <p>
+                    Aside from coding, I have another great passion, and that is football. I find the sport exhilarating and love the teamwork, strategy, and skill involved in playing it. Football helps me stay physically active and provides a great outlet for stress relief.
+                    </p>
+
+                    <p>
+                    I am proud to mention that I am a certified programmer, which indicates my dedication and competence in the field of programming. This certification has given me the confidence to tackle complex projects and deliver high-quality solutions.
+                    </p>
+                </div>
+            </div>
+    <center>
+            <div class="row about-me__buttons">
+                
+                
+                    <a href="#0" class="btn btn--primary full-width">Contact</a>
+                </div>
+            </div>
+
+        </div>
+        </center><!-- end about-me -->
+                <div class="about-experience">
+
+            <div class="row heading-block" data-aos="fade-up">
+                <div class="column large-full">
+                    <h2 class="section-heading">Work & Education</h2>
+                </div>
+            </div>
+
+            <div class="row about-experience__timeline">
+
+                <div class="column large-half tab-full" data-aos="fade-up">
+                    <div class="timeline">
+
+                        <div class="timeline__icon-wrap">
+                            <span class="timeline__icon timeline__icon--work"></span>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">OCTOBER 2023 - PRESENT</p>
+                                <h3 class="item-title">Infosys</h3>
+                                <h5>Cyber Security</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <img id="myImg" src="https://shashanksharma001.github.io/img/Cyber%20security%20fundamentals(Python)_page-0001%20(1).jpg" alt="" width="300" height="200">
+                            </div>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">October- 2022</p>
+                                <h3 class="item-title">GUVI</h3>
+                                <h5>PYTHON</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <img id="myImg" src="https://shashanksharma001.github.io/img/GuviCertification.png" alt="" width="300" height="200">
+                            </div>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">JULY-2022</p>
+                                <h3 class="item-title">GREAT LEARNING</h3>
+                                <h5>JAVA</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <img id="myImg" src="https://shashanksharma001.github.io/img/Great%20learning.png" alt="" width="300" height="200">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="column large-half tab-full" data-aos="fade-up">
+                    <div class="timeline">
+
+                        <div class="timeline__icon-wrap">
+                            <span class="timeline__icon timeline__icon--education"></span>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">August 2022</p>
+                                <h3 class="item-title">HACKER RANK</h3>
+                                <h5>PYTHON</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <img id="myImg" src="https://raw.githubusercontent.com/ShashankSharma001/ShashankSharma001.github.io/main/Screenshot_26-6-2024_54256_.jpeg" alt="" width="300" height="200">
+                            </div>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">August 2022</p>
+                                <h3 class="item-title">INFOSYS</h3>
+                                <h5>JAVA</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <img id="myImg" src="https://shashanksharma001.github.io/img/Infosys.png" alt="" width="300" height="200">
+                            </div>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">December 2022</p>
+                                <h3 class="item-title">IIT MADRAS</h3>
+                                <h5>PYTHON</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <img id="myImg" src="https://shashanksharma001.github.io/img/certificate%20iit%20madras.jpg" alt="" width="300" height="200">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- end about-experience -->
+
+    </section> <!-- end s-about -->
+ <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id="services" class="s-services ss-dark target-section">
+
+        <div class="shadow-overlay"></div>
+
+        <div class="row heading-block heading-block--center" data-aos="fade-up">
+            <div class="column large-full">
+                <h2 class="section-heading section-heading--centerbottom">Services We Provide</h2>
+
+                <p class="section-desc">
+                    My passion and goal is to help you make you standout.
+                </p>
+            </div>
+        </div> <!-- end heading-block -->
+
+        <div class="row services-list block-large-1-3 block-medium-1-2 block-tab-full">
+
+            <div class="column item-service" data-aos="fade-up">
+                <div class="item-service__content">
+                    <h4 class="item-title">Programming Courses</h4>
+                    <p>
+                    We offer professional courses in Python, Full Stack Development, and Java, designed to equip you with the essential skills and knowledge to excel in the tech industry. Join us to advance your career today.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column item-service" data-aos="fade-up">
+                <div class="item-service__content">
+                    <h4 class="item-title">Web Development</h4>
+                    <p>
+                    We specialize in creating professional websites tailored to your needs. Our expert team delivers high-quality, responsive, and visually appealing websites designed to enhance your online presence and drive business growth. Partner with us for exceptional results.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column item-service" data-aos="fade-up">
+                <div class="item-service__content">
+                    <h4 class="item-title">Copy writing</h4>
+                    <p>
+                    We specialize in professional copywriting services tailored to elevate your brand. Let our skilled team craft compelling content that resonates with your audience and drives results. Contact us today to enhance your brand's voice.
+                    </p>
+                </div>
+            
+
+            
+        </div> <!-- end services-list -->
+
+    </section> <!-- end s-services -->
+
+
+    
+    <!-- works
+    ================================================== -->
+   
+
+
+    
+    <<!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact ss-dark target-section">
+
+        <div class="row heading-block" data-aos="fade-up">
+            <div class="column large-full">
+                <h2 class="section-heading">Get In Touch</h2>
+            </div>
+        </div>
+
+        <div class="row contact-main" data-aos="fade-up">
+            <div class="column large-full">
+                
+
+                <p class="section-desc">
+                I'm happy to connect, listen and help. Let's work together and build
+                something awesome. Let's turn your idea to an even greater product.
+                <a href="https://www.instagram.com/sharma.shashank.001/?next=%2F">DM ME</a>.
+                </p>
+            </div>
+        </div>
+
+        <div class="row contact-infos" data-aos="fade-up" data-aos-anchor=".contact-main">
+
+            <div class="column large-5 medium-full contact-phone">
+                <h4>Email Me</h4>
+                <a href="tel:197-543-2345">Shashanksharmaaaaa@gmail.com</a>
+            </div>
+
+            <div class="column large-7 medium-full contact-social">
+                <h4>Social</h4>
+                <ul>
+                    <li><a href="github.com/ShashankSharma001" title="github">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/shashank-sharma-16075526a/" title="Linkedin">Linkedin</a></li>
+                    <li><a href="https://www.instagram.com/sharma.shashank.001/?next=%2F" title="Instagram">Instagram</a></li>
+                </ul>
+            </div>
+
+        </div> <!-- end contact-infos -->
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="column large-full ss-copyright">
+                <span>© Copyright Shashank Sharma 2024</span> 
+                
+            </div>            
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div><!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
